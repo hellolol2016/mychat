@@ -45,7 +45,7 @@ def getMember(req):
     room_name=room_name,
   )
   name = member.name
-  return JsonResponse({'name':member.name},safe=False)
+  return JsonResponse({'name':name},safe=False)
 
 @csrf_exempt
 def deleteMember(request):
