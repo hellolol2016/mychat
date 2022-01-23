@@ -28,14 +28,14 @@ def room(req):
 
 @csrf_exempt
 def createMember(req):
-    data = json.loads(req.body)
-    member, created = RoomMember.objects.get_or_create(
-        name=data['name'],
-        uid=data['UID'],
-        room_name=data['room_name']
-    )
+  data = json.loads(req.body)
+  member, created = RoomMember.objects.get_or_create(
+      name=data['name'],
+      uid=data['UID'],
+      room_name=data['room_name']
+  )
 
-    return JsonResponse({'name':data['name']}, safe=False)
+  return JsonResponse({'name':data['name']}, safe=False)
 
 def getMember(req):
   uid = req.GET.get('UID')
