@@ -27,9 +27,9 @@ def room(req):
   return render(req,'base/room.html')
 
 @csrf_exempt
-def createMember(request):
-    data = json.loads(request.body)
-    member, created = RoomMember.objects.get_or_create(
+def createMember(req):
+    data = json.loads(req.body)
+    RoomMember.objects.get_or_create(
         name=data['name'],
         uid=data['UID'],
         room_name=data['room_name']
