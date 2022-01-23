@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_s@l)daijm^_1xcbr!7k0s)6p3p4a2_4^jquvt6tkezazr&cti'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["django-videochat.herokuapp.com", '127.0.0.1']
 
 
 # Application definition
